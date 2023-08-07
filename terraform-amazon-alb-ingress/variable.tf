@@ -1,5 +1,5 @@
 variable "cluster-name" {
-  default = "jenkins"
+  default = ""
 }
 
 variable "create_OIDC_Identity_providers" {
@@ -8,13 +8,13 @@ variable "create_OIDC_Identity_providers" {
 }
 
 variable "region" {
-  default = "us-east-1"
+  default = ""
 }
 
 variable "access_key" {
-  default = "AKIAVHFXPBNTUXQSJEGY"
+  default = ""
 }
 
 variable "secret_key" {
-  default = "2+pz4srv3GDkZ1h80n3Ldf6AOsxh3iz973DZcr+n"
+  default = ""
 }

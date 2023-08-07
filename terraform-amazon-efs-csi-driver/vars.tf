@@ -1,15 +1,15 @@
 variable "cluster_name" {
-  default = "jenkins"
+  default = ""
 }
 
 variable "region" {
-  default = "us-east-1"
+  default = ""
 }
 
 variable "access_key" {
-  default = "AKIAULTTLJDIPBE3IMDC"
+  default = ""
 }
 
 variable "secret_key" {
-  default = "CW+lcaJngpQGfgP5yasv06qKcc+xke1CK0g03S0j"
+  default = ""
 }

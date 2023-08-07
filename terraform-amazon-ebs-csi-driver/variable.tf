@@ -1,5 +1,5 @@
 variable "cluster_name" {
-  default = "eks-test-cluster"
+  default = ""
 }
 
 variable "service_account_name" {
