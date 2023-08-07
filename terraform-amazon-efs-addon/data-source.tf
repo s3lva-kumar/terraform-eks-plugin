@@ -13,7 +13,6 @@ data "aws_eks_cluster_auth" "cluserAuth" {
   name = var.cluster-name
 }
 
-
 data "aws_iam_policy_document" "assume_role_policy" {
   statement {
     actions = ["sts:AssumeRoleWithWebIdentity"]
@@ -22,7 +21,7 @@ data "aws_iam_policy_document" "assume_role_policy" {
     condition {
       test     = "StringEquals"
       variable = "${replace(data.aws_eks_cluster.cluster.identity[0].oidc[0].issuer, "https://", "")}:sub"
-      values   = ["system:serviceaccount:kube-system:aws-alb-ingress-controller"]
+      values   = ["system:serviceaccount:kube-system:efs-csi-controller-sa"]
 
     }
     condition {

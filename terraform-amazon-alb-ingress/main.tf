@@ -1,8 +1,8 @@
 resource "aws_iam_openid_connect_provider" "k8s-cluster" {
   count = var.create_OIDC_Identity_providers ? 1 : 0
   client_id_list  = ["sts.amazonaws.com"]
-  thumbprint_list = data.tls_certificate.eks-cret.certificates[*].sha1_fingerprint
-  url             = data.tls_certificate.eks-cret.url
+  thumbprint_list = data.tls_certificate.eks-cert.certificates[*].sha1_fingerprint
+  url             = data.tls_certificate.eks-cert.url
 }
 
 resource "aws_iam_policy" "alb-policy" {
