@@ -5,11 +5,6 @@ resource "aws_iam_openid_connect_provider" "k8s-cluster" {
   url             = data.tls_certificate.eks-cert.url
 }
 
-resource "aws_iam_policy" "alb-policy" {
-  name   = "AWSLoadBalancerControllerIAMPolicy"
-  policy = file("templates/iam_policy.json")
-}
-
 resource "aws_iam_role" "oidc-role" {
   assume_role_policy = data.aws_iam_policy_document.assume_role_policy.json
   name               = "AmazonEKSLoadBalancerControllerRole"

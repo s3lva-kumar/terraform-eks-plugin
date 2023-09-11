@@ -5,4 +5,6 @@ variable "create_OIDC_Identity_providers" {
   description = "Give only true or false"
 }
 
-variable "addon_version" {}
+variable "addon_version" {
+  default = "v1.5.8-eksbuild.1"
+}

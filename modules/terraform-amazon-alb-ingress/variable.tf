@@ -1,5 +1,4 @@
-variable "cluster-name" {
-}
+variable "cluster-name" {}
 
 variable "create_OIDC_Identity_providers" {
   type = bool
