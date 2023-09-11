@@ -1,0 +1,17 @@
+{
+  "name": "terraform-eks-plugin",
+  "version": "0.1.0",
+  "description": "this is the terrafrom plugin",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "author": "Arun & Selva",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0"
+  }
+}
