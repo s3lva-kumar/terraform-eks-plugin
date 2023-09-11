@@ -26,3 +26,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-file: 'CHANGELOG.md'
           skip-on-empty: 'true'
+          pre-release: 'true'
