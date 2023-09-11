@@ -1,15 +1,14 @@
-# 0.1.0 (2023-09-11)
+# 0.2.0 (2023-09-11)
 
 
 ### Bug Fixes
 
-* update permission in github action ([16de1a4](https://github.com/s3lva-kumar/tett/commit/16de1a40dd62828a2bb9fa5cdf4285082a505bc6))
+* update the policy ([93b4058](https://github.com/s3lva-kumar/terraform-eks-plugin/commit/93b4058cdc283d3359e35c95c0f340f1433e7585))
 
 
 ### Features
 
-* initial commit ([46b4ef4](https://github.com/s3lva-kumar/tett/commit/46b4ef4bf8fdf1a28e7ae53da246a364e8407a30))
-* update pipeline ([b8fa4f1](https://github.com/s3lva-kumar/tett/commit/b8fa4f11c3f827fd168bd6dc439d63b500d83a88))
+* add the release pipeline and husky ([2d11f85](https://github.com/s3lva-kumar/terraform-eks-plugin/commit/2d11f85a8d337ab300ed55793fe6f6a7c53d5888))
 
 
 
