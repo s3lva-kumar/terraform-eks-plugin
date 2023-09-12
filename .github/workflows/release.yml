@@ -26,4 +26,4 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm i -g semantic-release/changelog semantic-release/git && npx semantic-release
+        run: npm remove commitlint/config-conventional commitlint/cli && npm i && npx semantic-release
