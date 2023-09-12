@@ -22,12 +22,16 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ steps.node-version.outputs.node_version }}
-      - name: Configure committer
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-      - name: Bump version
-        uses: qzb/standard-version-action@v1.0.5
-      - name: git push release
-        run: |
-          git push --follow-tags origin master
+      # - name: Configure committer
+      #   run: |
+      #     git config user.name "GitHub Actions Bot"
+      #     git config user.email "<>"
+      - uses: GoogleCloudPlatform/release-please-action@v3
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: terraform-module
+          package-name: standard-version
+      # - name: git push release
+      #   run: |
+      #     git push --follow-tags origin master
