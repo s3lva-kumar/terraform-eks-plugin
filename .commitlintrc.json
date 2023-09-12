@@ -2,5 +2,5 @@
   "extends": [
     "@commitlint/config-conventional"
   ],
-  "ignores": [(message) => /^Bumps \[.+]\(.+\) from .+ to .+\.$/m.test(message), "header-max-length"]
+  "ignores": ["header-max-length"]
 }
