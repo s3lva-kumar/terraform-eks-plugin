@@ -2,16 +2,11 @@
   "name": "terraform-eks-plugin",
   "version": "0.0.1",
   "description": "this is the terrafrom plugin",
-  "scripts": {
-    "prepare": "husky install"
-  },
+  "scripts": {},
   "author": "Arun & Selva",
   "license": "ISC",
   "dependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
     "@semantic-release/changelog": "github:semantic-release/changelog",
-    "@semantic-release/git": "github:semantic-release/git",
-    "husky": "^8.0.3"
+    "@semantic-release/git": "github:semantic-release/git"
   }
 }
