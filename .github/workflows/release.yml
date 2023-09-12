@@ -6,7 +6,7 @@ on:
      - master
      - main
  workflow_dispatch:
-permissions: write-all
+permissions: write-all|pull-requests-all
 jobs:
   release:
     name: Publish new release
