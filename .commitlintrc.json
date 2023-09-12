@@ -1,5 +1,6 @@
 {
   "extends": [
     "@commitlint/config-conventional"
-  ]
+  ],
+  "ignores": ["body-max-line-length"]
 }
