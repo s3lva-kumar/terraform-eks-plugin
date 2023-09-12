@@ -26,4 +26,8 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm i && npx semantic-release
+        run: |
+          rm -rf .commitlintrc.json .husky
+          npm pkg delete scripts.prepare
+          npm uninstall husky @commitlint/config-conventional @commitlint/cli
+          npm i && npx semantic-release
