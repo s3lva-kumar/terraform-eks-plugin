@@ -9,8 +9,7 @@
   "author": "Arun & Selva",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^8.0.0",
-    "standard-version": "^9.5.0"
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@commitlint/cli": "^17.7.1",
