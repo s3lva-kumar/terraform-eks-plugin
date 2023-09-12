@@ -1,0 +1,27 @@
+name: release workflow
+
+on: 
+ push:
+   branches:
+     - master
+     - main
+
+jobs:
+  release:
+    name: Publish new release
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: setup node
+        run: |
+          echo "node_version=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.node-version.outputs.node_version }}
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm i && npx semantic-release
