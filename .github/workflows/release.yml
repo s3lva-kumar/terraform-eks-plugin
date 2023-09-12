@@ -1,14 +1,12 @@
-name: release workflow
+name: Push release workflow
 
 on: 
- push:
-   branches:
-     - master
-     - main
- workflow_dispatch:
-permissions: 
-  contents: write
-  pull-requests: write
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+permissions: write-all
   
 jobs:
   release:
@@ -18,23 +16,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: setup node
+      - name: get node version
         run: |
           echo "node_version=$(cat .nvmrc)" >> $GITHUB_OUTPUT
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ steps.node-version.outputs.node_version }}
-      # - name: Configure committer
-      #   run: |
-      #     git config user.name "GitHub Actions Bot"
-      #     git config user.email "<>"
-      - uses: GoogleCloudPlatform/release-please-action@v3
-        id: release
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: terraform-module
-          package-name: standard-version
-      # - name: git push release
-      #   run: |
-      #     git push --follow-tags origin master
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
