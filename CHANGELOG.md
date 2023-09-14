@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/s3lva-kumar/terraform-eks-plugin/compare/v1.1.1...v1.1.2) (2023-09-14)
+
+
+### Bug Fixes
+
+* update the pipeline ([2689f91](https://github.com/s3lva-kumar/terraform-eks-plugin/commit/2689f91e62a8fed62ef281363422448fbca06164))
+
 ## [1.1.1](https://github.com/s3lva-kumar/terraform-eks-plugin/compare/v1.1.0...v1.1.1) (2023-09-12)
 
 
