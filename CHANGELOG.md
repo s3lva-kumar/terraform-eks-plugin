@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/s3lva-kumar/terraform-eks-plugin/compare/v1.1.2...v1.2.0) (2023-10-17)
+
+
+### Features
+
+* create README.md ([0ccd199](https://github.com/s3lva-kumar/terraform-eks-plugin/commit/0ccd199ab8d6b91b9fcfe50e8bbd86f16b0bd89a))
+
 ## [1.1.2](https://github.com/s3lva-kumar/terraform-eks-plugin/compare/v1.1.1...v1.1.2) (2023-09-14)
 
 
