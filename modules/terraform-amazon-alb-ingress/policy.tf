@@ -159,13 +159,13 @@ resource "aws_iam_policy" "alb-policy" {
                 "arn:aws:elasticloadbalancing:*:*:targetgroup/*/*",
                 "arn:aws:elasticloadbalancing:*:*:loadbalancer/net/*/*",
                 "arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*"
-            ],
-            "Condition": {
-                "Null": {
-                    "aws:RequestTag/elbv2.k8s.aws/cluster": "true",
-                    "aws:ResourceTag/elbv2.k8s.aws/cluster": "false"
-                }
-            }
+            ]
+//            "Condition": {
+//                 "Null": {
+//                     "aws:RequestTag/elbv2.k8s.aws/cluster": "true",
+//                     "aws:ResourceTag/elbv2.k8s.aws/cluster": "true"
+//                 }
+//             }
         },
         {
             "Effect": "Allow",
